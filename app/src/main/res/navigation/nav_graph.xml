@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="com.example.trainit.MenuFragment"
+        android:label="@string/menu_fragment_label"
+        tools:layout="@layout/fragment_menu">
+
+        <action
+            android:id="@+id/action_MenuFragment_to_SecondFragment"
+            app:destination="@id/WeatherFragment" />
+        <action
+            android:id="@+id/action_MenuFragment_to_MapsFragment"
+            app:destination="@id/MapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WeatherFragment"
+        android:name="com.example.trainit.WeatherFragment"
+        android:label="@string/weather_fragment_label"
+        tools:layout="@layout/fragment_weather">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MapsFragment"
+        android:name="com.example.trainit.MapsFragment"
+        android:label="@string/maps_fragment_label"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_MapsFragment_to_FirstFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+</navigation>
