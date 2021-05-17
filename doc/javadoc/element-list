@@ -1,0 +1,8 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.trainit.data/Result.Error///PointingToDeclaration/com/example/trainit/data/Result.Error.html
+$dokka.location:com.example.trainit.data/Result.Success///PointingToDeclaration/com/example/trainit/data/Result.Success.html
+$dokka.location:com.example.trainit/WeatherFragment.weatherTask///PointingToDeclaration/com/example/trainit/WeatherFragment.weatherTask.html
+com.example.trainit
+com.example.trainit.data
+

@@ -1,0 +1,1 @@
+var packageSearchIndex = [{"l":"com.example.trainit","url":"com/example/trainit/package-summary.html"}, {"l":"com.example.trainit.data","url":"com/example/trainit/data/package-summary.html"}, {"l":"All packages","url":"index.html"}]

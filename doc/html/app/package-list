@@ -1,0 +1,62 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.trainit.data////PointingToDeclaration/app/com.example.trainit.data/index.html
+$dokka.location:com.example.trainit.data/LoginDataSource///PointingToDeclaration/app/com.example.trainit.data/-login-data-source/index.html
+$dokka.location:com.example.trainit.data/LoginDataSource/LoginDataSource/#/PointingToDeclaration/app/com.example.trainit.data/-login-data-source/-login-data-source.html
+$dokka.location:com.example.trainit.data/LoginDataSource/login/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.trainit.data/-login-data-source/login.html
+$dokka.location:com.example.trainit.data/LoginRepository///PointingToDeclaration/app/com.example.trainit.data/-login-repository/index.html
+$dokka.location:com.example.trainit.data/LoginRepository/LoginRepository/#com.example.trainit.data.LoginDataSource/PointingToDeclaration/app/com.example.trainit.data/-login-repository/-login-repository.html
+$dokka.location:com.example.trainit.data/LoginRepository/dataSource/#/PointingToDeclaration/app/com.example.trainit.data/-login-repository/data-source.html
+$dokka.location:com.example.trainit.data/LoginRepository/login/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.trainit.data/-login-repository/login.html
+$dokka.location:com.example.trainit.data/LoginRepository/user/#/PointingToDeclaration/app/com.example.trainit.data/-login-repository/user.html
+$dokka.location:com.example.trainit.data/Result.Error///PointingToDeclaration/app/com.example.trainit.data/-result/-error/index.html
+$dokka.location:com.example.trainit.data/Result.Error/Error/#java.lang.Exception/PointingToDeclaration/app/com.example.trainit.data/-result/-error/-error.html
+$dokka.location:com.example.trainit.data/Result.Error/exception/#/PointingToDeclaration/app/com.example.trainit.data/-result/-error/exception.html
+$dokka.location:com.example.trainit.data/Result.Success///PointingToDeclaration/app/com.example.trainit.data/-result/-success/index.html
+$dokka.location:com.example.trainit.data/Result.Success/Success/#TypeParam(bounds=[kotlin.Any])/PointingToDeclaration/app/com.example.trainit.data/-result/-success/-success.html
+$dokka.location:com.example.trainit.data/Result.Success/data/#/PointingToDeclaration/app/com.example.trainit.data/-result/-success/data.html
+$dokka.location:com.example.trainit.data/Result///PointingToDeclaration/app/com.example.trainit.data/-result/index.html
+$dokka.location:com.example.trainit.data/Result/toString/#/PointingToDeclaration/app/com.example.trainit.data/-result/to-string.html
+$dokka.location:com.example.trainit////PointingToDeclaration/app/com.example.trainit/index.html
+$dokka.location:com.example.trainit/LoggedInUserView///PointingToDeclaration/app/com.example.trainit/-logged-in-user-view/index.html
+$dokka.location:com.example.trainit/LoggedInUserView/LoggedInUserView/#kotlin.String/PointingToDeclaration/app/com.example.trainit/-logged-in-user-view/-logged-in-user-view.html
+$dokka.location:com.example.trainit/LoggedInUserView/displayName/#/PointingToDeclaration/app/com.example.trainit/-logged-in-user-view/display-name.html
+$dokka.location:com.example.trainit/LoginActivity///PointingToDeclaration/app/com.example.trainit/-login-activity/index.html
+$dokka.location:com.example.trainit/LoginActivity/LoginActivity/#/PointingToDeclaration/app/com.example.trainit/-login-activity/-login-activity.html
+$dokka.location:com.example.trainit/LoginResult///PointingToDeclaration/app/com.example.trainit/-login-result/index.html
+$dokka.location:com.example.trainit/LoginResult/LoginResult/#com.example.trainit.LoggedInUserView?#kotlin.Int?/PointingToDeclaration/app/com.example.trainit/-login-result/-login-result.html
+$dokka.location:com.example.trainit/LoginResult/error/#/PointingToDeclaration/app/com.example.trainit/-login-result/error.html
+$dokka.location:com.example.trainit/LoginResult/success/#/PointingToDeclaration/app/com.example.trainit/-login-result/success.html
+$dokka.location:com.example.trainit/LoginViewModel///PointingToDeclaration/app/com.example.trainit/-login-view-model/index.html
+$dokka.location:com.example.trainit/LoginViewModel/LoginViewModel/#com.example.trainit.data.LoginRepository/PointingToDeclaration/app/com.example.trainit/-login-view-model/-login-view-model.html
+$dokka.location:com.example.trainit/LoginViewModel/login/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.trainit/-login-view-model/login.html
+$dokka.location:com.example.trainit/LoginViewModel/loginResult/#/PointingToDeclaration/app/com.example.trainit/-login-view-model/login-result.html
+$dokka.location:com.example.trainit/LoginViewModelFactory///PointingToDeclaration/app/com.example.trainit/-login-view-model-factory/index.html
+$dokka.location:com.example.trainit/LoginViewModelFactory/LoginViewModelFactory/#/PointingToDeclaration/app/com.example.trainit/-login-view-model-factory/-login-view-model-factory.html
+$dokka.location:com.example.trainit/LoginViewModelFactory/create/#java.lang.Class[TypeParam(bounds=[androidx.lifecycle.ViewModel])]/PointingToDeclaration/app/com.example.trainit/-login-view-model-factory/create.html
+$dokka.location:com.example.trainit/MainActivity///PointingToDeclaration/app/com.example.trainit/-main-activity/index.html
+$dokka.location:com.example.trainit/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.trainit/-main-activity/-main-activity.html
+$dokka.location:com.example.trainit/MainActivity/PERMISSION_ID/#/PointingToDeclaration/app/com.example.trainit/-main-activity/-p-e-r-m-i-s-s-i-o-n_-i-d.html
+$dokka.location:com.example.trainit/MapsFragment///PointingToDeclaration/app/com.example.trainit/-maps-fragment/index.html
+$dokka.location:com.example.trainit/MapsFragment/MapsFragment/#/PointingToDeclaration/app/com.example.trainit/-maps-fragment/-maps-fragment.html
+$dokka.location:com.example.trainit/MapsFragment/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup?#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-maps-fragment/on-create-view.html
+$dokka.location:com.example.trainit/MapsFragment/onLocationChanged/#android.location.Location/PointingToDeclaration/app/com.example.trainit/-maps-fragment/on-location-changed.html
+$dokka.location:com.example.trainit/MapsFragment/onMapReady/#com.google.android.gms.maps.GoogleMap?/PointingToDeclaration/app/com.example.trainit/-maps-fragment/on-map-ready.html
+$dokka.location:com.example.trainit/MapsFragment/onViewCreated/#android.view.View#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-maps-fragment/on-view-created.html
+$dokka.location:com.example.trainit/MapsFragment/runnable/#/PointingToDeclaration/app/com.example.trainit/-maps-fragment/runnable.html
+$dokka.location:com.example.trainit/MenuFragment///PointingToDeclaration/app/com.example.trainit/-menu-fragment/index.html
+$dokka.location:com.example.trainit/MenuFragment/MenuFragment/#/PointingToDeclaration/app/com.example.trainit/-menu-fragment/-menu-fragment.html
+$dokka.location:com.example.trainit/MenuFragment/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup?#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-menu-fragment/on-create-view.html
+$dokka.location:com.example.trainit/MenuFragment/onViewCreated/#android.view.View#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-menu-fragment/on-view-created.html
+$dokka.location:com.example.trainit/WeatherFragment.weatherTask///PointingToDeclaration/app/com.example.trainit/-weather-fragment/weather-task/index.html
+$dokka.location:com.example.trainit/WeatherFragment.weatherTask/weatherTask/#/PointingToDeclaration/app/com.example.trainit/-weather-fragment/weather-task/weather-task.html
+$dokka.location:com.example.trainit/WeatherFragment///PointingToDeclaration/app/com.example.trainit/-weather-fragment/index.html
+$dokka.location:com.example.trainit/WeatherFragment/API/#/PointingToDeclaration/app/com.example.trainit/-weather-fragment/-a-p-i.html
+$dokka.location:com.example.trainit/WeatherFragment/URL/#/PointingToDeclaration/app/com.example.trainit/-weather-fragment/-u-r-l.html
+$dokka.location:com.example.trainit/WeatherFragment/WeatherFragment/#/PointingToDeclaration/app/com.example.trainit/-weather-fragment/-weather-fragment.html
+$dokka.location:com.example.trainit/WeatherFragment/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup?#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-weather-fragment/on-create-view.html
+$dokka.location:com.example.trainit/WeatherFragment/onLocationChanged/#android.location.Location/PointingToDeclaration/app/com.example.trainit/-weather-fragment/on-location-changed.html
+$dokka.location:com.example.trainit/WeatherFragment/onViewCreated/#android.view.View#android.os.Bundle?/PointingToDeclaration/app/com.example.trainit/-weather-fragment/on-view-created.html
+com.example.trainit
+com.example.trainit.data
+
