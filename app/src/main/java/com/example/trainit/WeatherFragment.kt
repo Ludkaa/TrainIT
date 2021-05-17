@@ -1,7 +1,10 @@
 package com.example.trainit
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,15 +14,17 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.maps.OnMapReadyCallback
 import org.json.JSONObject
 import java.net.URL
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class WeatherFragment : Fragment() {
+class WeatherFragment : Fragment(), LocationListener{
     val API: String = "06c921750b9a82d8f5d1294e1586276f"
     var URL: String = ""
+    private lateinit var locationManager: LocationManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,17 +39,15 @@ class WeatherFragment : Fragment() {
         view.findViewById<Button>(R.id.button_back).setOnClickListener {
             findNavController().navigate(R.id.action_WeatherFragment_to_MenuFragment)
         }
-        //premenná do ktorej sa uloží objekt
-        val locationResult: MyLocation.LocationResult = object : MyLocation.LocationResult() {
-            override fun gotLocation(location: Location?) {
-                URL = "https://api.openweathermap.org/data/2.5/weather?lat=${location?.latitude}&lon=${location?.longitude}&units=metric&appid=$API"
-                weatherTask().execute()
-            }
-        }
-        //vytvorí sa inštancia objektu MyLocation
-        val myLocation = MyLocation()
-        myLocation.getLocation(context, locationResult)
+
+        getLocation()
     }
+
+     @SuppressLint("MissingPermission")
+     private fun getLocation() {
+         locationManager = (requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager)
+         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 5f, this)
+     }
 
     //rozšírenie triedy
     inner class weatherTask : AsyncTask<String, Void, String>() {
@@ -85,5 +88,10 @@ class WeatherFragment : Fragment() {
                 view?.findViewById<TextView>(R.id.textview_second)?.text = "Error"
             }
         }
+    }
+
+    override fun onLocationChanged(location: Location) {
+        URL = "https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=$API"
+        weatherTask().execute()
     }
 }

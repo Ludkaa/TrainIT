@@ -44,6 +44,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
     private var mCurrLocationMarker : Marker? = null
     private var MillisecondTime: Long = 0
     private var StartTime: Long = 0
+    private var StartPauseTime: Long = 0
     private var TimeBuff: Long = 0
     private var UpdateTime = 0L
     private var Seconds: Int = 0
@@ -89,9 +90,11 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
                 handler?.removeCallbacks(runnable)
                 pauseButton.setImageResource(android.R.drawable.ic_media_play)
                 flag=false
+                StartPauseTime = SystemClock.uptimeMillis()
+
             }else{
+                TimeBuff = SystemClock.uptimeMillis() - StartPauseTime
                 pauseButton.setImageResource(android.R.drawable.ic_media_pause)
-                //StartTime = SystemClock.uptimeMillis()
                 handler?.postDelayed(runnable, 0)
                 flag=true
             }
@@ -110,14 +113,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
 
                 builder = Notification.Builder(root.context, channelId)
                     .setSmallIcon(R.drawable.ic_launcher_background)
-                    .setContentTitle("Congratulations!")
+                    .setContentTitle(getString(R.string.notificationP1))
                     .setContentText("Your run was ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km long.")
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_launcher_background))
             }
             //stare androidy N-
             else {
                 builder = Notification.Builder(root.context)
-                    .setContentTitle("Congratulations!")
+                    .setContentTitle(getString(R.string.notificationP1))
                     .setContentText("Your run was ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km long.")
                     .setSmallIcon(R.drawable.ic_launcher_background)
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_launcher_background))
@@ -177,7 +180,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
 
         override fun run() {
             MillisecondTime = SystemClock.uptimeMillis() - StartTime
-            UpdateTime = TimeBuff + MillisecondTime
+            UpdateTime = MillisecondTime - TimeBuff
             Seconds = (UpdateTime / 1000).toInt()
             Hours = Seconds / 3600
             Minutes = Seconds / 60

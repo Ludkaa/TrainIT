@@ -39,4 +39,7 @@
     <string name="maps_fragment_label">Maps Fragment</string>
     <string name="speed">Speed</string>
     <string name="title">TrainIT!</string>
+    <string name="turn_on_gps">Turn on gps</string>
+    <string name="you_need_to_turn_on_your_gps">You need to turn on your GPS!</string>
+    <string name="notificationP1">Congratulations!</string>
 </resources>
