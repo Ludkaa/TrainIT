@@ -1,7 +1,11 @@
 package com.example.trainit
 
 /**
- * Authentication result : success (user details) or error message.
+ * Vysledok autentifikacie
+ *
+ * @property success
+ * @property error
+ * @constructor Create empty Login result
  */
 data class LoginResult (
      val success: LoggedInUserView? = null,

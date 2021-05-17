@@ -6,8 +6,9 @@ import com.example.trainit.data.LoginDataSource
 import com.example.trainit.data.LoginRepository
 
 /**
- * ViewModel provider factory to instantiate LoginViewModel.
- * Required given LoginViewModel has a non-empty constructor
+ * Sluzi na inicializaciu viewModelu
+ *
+ * @constructor Create empty Login view model factory
  */
 class LoginViewModelFactory : ViewModelProvider.Factory {
 

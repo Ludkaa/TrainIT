@@ -1,33 +1,25 @@
 <resources>
     <string name="app_name">TrainIT!</string>
-    <!-- Strings related to login -->
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
+    <!-- Stringy patriace ku loginu -->
+    <string name="log_in">Log in</string>
     <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="logo">logo</string>
-    <string name="title_activity_main">TrainIT</string>
-    <!-- Strings used for fragments for navigation -->
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="create_account">create account</string>
+    <!-- Stringy pre fragmenty a navigaciu -->
     <string name="menu_fragment_label">Menu Fragment</string>
     <string name="weather_fragment_label">Weather Fragment</string>
     <string name="new_activity">New activity</string>
     <string name="all_activities">All activities</string>
+    <string name="maps_fragment_label">Maps Fragment</string>
     <string name="actual_weather">Actual weather</string>
     <string name="back">Back</string>
-
+    <!-- Stringy pre premenne a buttony -->
     <string name="time">Time</string>
     <string name="distance">Distance</string>
-    <string name="maps_fragment_label">Maps Fragment</string>
     <string name="speed">Speed</string>
     <string name="title">TrainIT!</string>
-    <string name="turn_on_gps">Turn on gps</string>
-    <string name="you_need_to_turn_on_your_gps">You need to turn on your GPS!</string>
     <string name="notificationP1">Congratulations!</string>
-    <string name="log_in">Log in</string>
-    <string name="username">username</string>
-    <string name="action_sign_in_short" />
-    <string name="password">password</string>
-    <string name="create_account">create account</string>
+    <string name="logo">logo</string>
 </resources>

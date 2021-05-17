@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.TrainIT.PopupOverlay" />
+            app:popupTheme="@style/Theme.TrainIT.PopupOverlay"
+            app:title="@string/app_name" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

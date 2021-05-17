@@ -9,12 +9,16 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 
+/**
+ * Main activity
+ *
+ * @constructor Create empty Main activity
+ */
 class MainActivity : AppCompatActivity() {
     val PERMISSION_ID = 42
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        setSupportActionBar(findViewById(R.id.toolbar))
         if (!checkPermissions()) {
             requestPermissions()
         }

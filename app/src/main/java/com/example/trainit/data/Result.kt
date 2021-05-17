@@ -1,12 +1,28 @@
 package com.example.trainit.data
 
 /**
- * A generic class that holds a value with its loading status.
- * @param <T>
+ * Trieda ktora drzi data o uspesnosti
+ *
+ * @param T
+ * @constructor Create empty Result
  */
 sealed class Result<out T : Any> {
 
+    /**
+     * Success
+     *
+     * @param T
+     * @property data
+     * @constructor Create empty Success
+     */
     data class Success<out T : Any>(val data: T) : Result<T>()
+
+    /**
+     * Error
+     *
+     * @property exception
+     * @constructor Create empty Error
+     */
     data class Error(val exception: Exception) : Result<Nothing>()
 
     override fun toString(): String {

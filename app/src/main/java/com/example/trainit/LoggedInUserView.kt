@@ -1,7 +1,10 @@
 package com.example.trainit
 
 /**
- * User details post authentication that is exposed to the UI
+ * Informacie o prihlasenom uzivatelovi
+ *
+ * @property displayName
+ * @constructor Create empty Logged in user view
  */
 data class LoggedInUserView(
     val displayName: String

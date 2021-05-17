@@ -18,7 +18,9 @@ import org.json.JSONObject
 import java.net.URL
 
 /**
- * A simple [Fragment] subclass as the second destination in the navigation.
+ * Weather fragment
+ *
+ * @constructor Create empty Weather fragment
  */
 class WeatherFragment : Fragment(), LocationListener{
     val API: String = "06c921750b9a82d8f5d1294e1586276f"
@@ -28,27 +30,33 @@ class WeatherFragment : Fragment(), LocationListener{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_weather, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //pri staceni buttonu back
         view.findViewById<Button>(R.id.button_back).setOnClickListener {
             findNavController().navigate(R.id.action_WeatherFragment_to_MenuFragment)
         }
 
+        //zavola funkciu getLocation
         getLocation()
     }
 
+     //locationManager zisti aktualnu polohu
      @SuppressLint("MissingPermission")
      private fun getLocation() {
          locationManager = (requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager)
          locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 5f, this)
      }
 
-    //rozšírenie triedy
+    /**
+     * Weather task - rozšírenie triedy
+     *
+     * @constructor Create empty Weather task
+     */
     inner class weatherTask : AsyncTask<String, Void, String>() {
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
@@ -89,6 +97,7 @@ class WeatherFragment : Fragment(), LocationListener{
         }
     }
 
+    //pri zmene lokacie pomocou openweathermap ziska informacie o pocasi
     override fun onLocationChanged(location: Location) {
         URL = "https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=$API"
         weatherTask().execute()

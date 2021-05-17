@@ -37,6 +37,11 @@ import com.google.maps.android.SphericalUtil
 import kotlin.math.round
 
 
+/**
+ * Maps fragment
+ *
+ * @constructor Create empty Maps fragment
+ */
 class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
     private var mMap: GoogleMap? = null
     private lateinit var locationManager: LocationManager
@@ -74,6 +79,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //vytvorenie premennych
         val root = inflater.inflate(R.layout.fragment_maps, container, false)
         Time = root.findViewById(R.id.time)
         Distance = root.findViewById(R.id.distance)
@@ -86,12 +92,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
         flag=true
         handler?.postDelayed(runnable, 0)
         pauseButton.setOnClickListener{
+            //ak sa stlaci pauza
             if (flag){
                 handler?.removeCallbacks(runnable)
                 pauseButton.setImageResource(android.R.drawable.ic_media_play)
                 flag=false
                 StartPauseTime = SystemClock.uptimeMillis()
 
+            //ak sa obnovi play
             }else{
                 TimeBuff = SystemClock.uptimeMillis() - StartPauseTime
                 pauseButton.setImageResource(android.R.drawable.ic_media_pause)
@@ -99,10 +107,12 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
                 flag=true
             }
         }
+        //ak sa stlci stop
         stopButton.setOnClickListener{
             handler?.removeCallbacks(runnable)
             flag=false
 
+            //Notifikacia
             //nove androidy O+(Android 8)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 notificationChannel = NotificationChannel(channelId, "notification", NotificationManager.IMPORTANCE_HIGH)
@@ -131,6 +141,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
         return root
     }
 
+    //nastavenie mapy
     private fun setupMapIfNeeded() {
         if (mMap == null) {
             val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
@@ -143,11 +154,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
         setupMapIfNeeded()
     }
 
+    //locationManager zisti aktualnu polohu
     @SuppressLint("MissingPermission")
     private fun getLocation() {
         locationManager = (requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager)
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 5f, this)
     }
+
+    //pri zmene polohy sa vykresli ciara
     override fun onLocationChanged(location: Location) {
         if (flag) {
             val pos = LatLng(location.latitude, location.longitude)
@@ -165,11 +179,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
             var speedSec = ((UpdateTime/1000.0)/(SphericalUtil.computeLength(mLatLngList)/1000)).toInt()
             val speedMin = speedSec / 60
             speedSec %= 60
+
+            //ak je male cislo prida sa 0
             if (speedSec.toString().length < 2) {
                 Speed?.text = "$speedMin:0$speedSec min/km"
             } else {
                 Speed?.text = "$speedMin:$speedSec min/km"
         }
+            //ak je prilis velke cislo
             if (speedMin > 60) {
                 Speed?.text = "--:-- min/km"
             }
@@ -177,7 +194,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
     }
 
     var runnable: Runnable = object : Runnable {
-
+        //praca s casom...TimeBuff prezentuje cas pauznutia
         override fun run() {
             MillisecondTime = SystemClock.uptimeMillis() - StartTime
             UpdateTime = MillisecondTime - TimeBuff
