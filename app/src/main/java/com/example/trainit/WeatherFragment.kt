@@ -14,7 +14,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.gms.maps.OnMapReadyCallback
 import org.json.JSONObject
 import java.net.URL
 
@@ -83,9 +82,9 @@ class WeatherFragment : Fragment(), LocationListener{
                 val address = jsonObj.getString("name")+", "+sys.getString("country")
 
                 //vypíše stav počasia na textview
-                view?.findViewById<TextView>(R.id.textview_second)?.text = "$address\nTemperature: $temp\nPressure: $pressure\nHumidity: $humidity\nWind speed: $windSpeed\n$weatherDescription"
+                view?.findViewById<TextView>(R.id.forecast)?.text = "$address\nTemperature: $temp\nPressure: $pressure\nHumidity: $humidity\nWind speed: $windSpeed\n$weatherDescription"
             } catch (e: Exception) {
-                view?.findViewById<TextView>(R.id.textview_second)?.text = "Error"
+                view?.findViewById<TextView>(R.id.forecast)?.text = "Error"
             }
         }
     }
