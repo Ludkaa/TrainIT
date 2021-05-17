@@ -32,7 +32,7 @@ class WeatherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_back).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_WeatherFragment_to_MenuFragment)
         }
         //premenná do ktorej sa uloží objekt
         val locationResult: MyLocation.LocationResult = object : MyLocation.LocationResult() {

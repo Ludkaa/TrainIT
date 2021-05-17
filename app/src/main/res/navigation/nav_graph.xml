@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_menu">
 
         <action
-            android:id="@+id/action_MenuFragment_to_SecondFragment"
+            android:id="@+id/action_MenuFragment_to_WeatherFragment"
             app:destination="@id/WeatherFragment" />
         <action
             android:id="@+id/action_MenuFragment_to_MapsFragment"
@@ -25,7 +25,7 @@
         tools:layout="@layout/fragment_weather">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_WeatherFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
@@ -34,7 +34,7 @@
         android:label="@string/maps_fragment_label"
         tools:layout="@layout/fragment_maps">
         <action
-            android:id="@+id/action_MapsFragment_to_FirstFragment"
+            android:id="@+id/action_MapsFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
 </navigation>

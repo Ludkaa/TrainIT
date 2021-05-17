@@ -14,7 +14,6 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false)
     }
 
@@ -22,7 +21,7 @@ class MenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_actual_weather).setOnClickListener {
-            findNavController().navigate(R.id.action_MenuFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_MenuFragment_to_WeatherFragment)
         }
         view.findViewById<Button>(R.id.button_new_activity).setOnClickListener {
             findNavController().navigate(R.id.action_MenuFragment_to_MapsFragment)

@@ -111,19 +111,19 @@ class MapsFragment : Fragment(), OnMapReadyCallback, LocationListener {
                 builder = Notification.Builder(root.context, channelId)
                     .setSmallIcon(R.drawable.ic_launcher_background)
                     .setContentTitle("Congratulations!")
-                    .setContentText("Odbehli ste ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km.")
+                    .setContentText("Your run was ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km long.")
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_launcher_background))
             }
             //stare androidy N-
             else {
                 builder = Notification.Builder(root.context)
                     .setContentTitle("Congratulations!")
-                    .setContentText("Odbehli ste ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km.")
+                    .setContentText("Your run was ${round((SphericalUtil.computeLength(mLatLngList) / 10))/100} km long.")
                     .setSmallIcon(R.drawable.ic_launcher_background)
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_launcher_background))
             }
             notificationManager.notify(1234, builder.build())
-            findNavController().navigate(R.id.action_MapsFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_MapsFragment_to_MenuFragment)
         }
         return root
     }
